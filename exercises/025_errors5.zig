@@ -26,8 +26,9 @@ fn addFive(n: u32) MyNumberError!u32 {
     // This function needs to return any error which might come back from detect().
     // Please use a "try" statement rather than a "catch".
     //
-    const x = detect(n);
+    const x = try detect(n);
 
+    //const x = MyNumberError.TooSmall;
     return x + 5;
 }
 
